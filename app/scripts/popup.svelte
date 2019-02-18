@@ -59,7 +59,7 @@
 </div>
 
 <script>
-  import { STATUS } from './constants';
+  import { STATUS } from './constants.json';
   import { outputs as icons } from '../images.json';
 
   const i18nStatuses = {
