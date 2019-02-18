@@ -17,5 +17,5 @@ function dataUrl(svg) {
   return `data:image/svg+xml;utf8,${svg}`;
 }
 
-export const SUCCESS_ICON_URL = dataUrl(svg(mdiCheckCircleOutline, "green"));
-export const FAILURE_ICON_URL = dataUrl(svg(mdiCloseCircleOutline, "red"));
+export const SUCCESS_ICON_URL = dataUrl(svg(mdiCheckCircleOutline, "rgb(36, 145, 130)"));
+export const FAILURE_ICON_URL = dataUrl(svg(mdiCloseCircleOutline, "rgb(208, 2, 27)"));
