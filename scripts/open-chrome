@@ -4,7 +4,7 @@ const path = require('path');
 const launcher = require('chrome-launcher');
 
 const extensionDirectory = path.resolve(process.cwd(), process.argv[2]);
-console.log(extensionDirectory);
+console.log(`Running web extension from ${extensionDirectory}`);
 
 launcher.launch({
   enableExtensions: true,
