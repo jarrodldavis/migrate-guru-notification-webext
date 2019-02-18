@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- stable
+cache: npm
+script:
+- npm run build firefox
+- npm run lint:firefox
+- npm run build chrome
+before_deploy:
+- rm packages/*.firefox.xpi.zip
+- npm run submit:firefox
+deploy:
+  provider: releases
+  api_key:
+    secure: kTGyZQ4SxOIaLNakfk8Uht7QhTlI/qwN463AjEpHRqVaV1kQixn+ex30zTt8XuMZyZa+iAzgZWIF6bbfUmk2064EPnYRZMNB3BPHrk71WDH20Zj5JWSeZgomzTZT6RSa9UcsrJ1oQjHAH017QM5rTZgk8jrBjCaT7GYzQOH7rGpvVeg93jZ/YT19fhaqB3PLG94BTwwJHQUcKfDxzIh53yWg/Psj2rsDc5N4sm9s+XzTHnKKhQb8qcgQtIlHfxi8NRKsTYGvmrkW6fas3JhgOX7C/hesDOTfhv195NMNwDS4dd+GEWEO2s2E+bb4/k1Akzs7hZLRhBPvTjYE+ZED/opqBe7QFe8PnDgE4A7BMkb4SHw3TH+piGo0oHSNbibUzepcGsJcD4sjmD4nn2nrD4csFQCCv5+mA7O6ogYTnF2InTy2XZ7qDU90TrYKDF5JyxcVpX6RvZHIO1KRn491ESZVrX7h7ewWOIvRwufLufC+KKLvyrAHQhI+tw6HD38IfFoTHO7hYd6LrHpeTQ3j3psPLtUvJIwm9iDq/GwuNoHLqlObb7P3YsYdXDDImD354hxoEIONuhWXv7Rrfvx5EY4unZ9XVaeQTqYYlkVu3OAGWn3FqmwBUhxRI/tQBWTiRwIzkxivha3mW19KNcAMaKlR7dazGBzBhQXAJ3AqjtU=
+  skip_cleanup: true
+  file_glob: true
+  file: packages/*
+  on:
+    repo: jarrodldavis/migrate-guru-notification-webext
+    tags: true
