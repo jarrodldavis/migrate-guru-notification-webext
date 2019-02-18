@@ -8,7 +8,30 @@ browser.runtime.onInstalled.addListener((details) => {
   console.log('previousVersion', details.previousVersion)
 })
 
+let notificationsEnabled = true;
+
+browser.storage.onChanged.addListener(function(changes) {
+  if (changes.notifications === undefined) {
+    return;
+  }
+
+  notificationsEnabled = changes.notifications.newValue;
+  if (!notificationsEnabled) {
+    browser.notifications.getAll().then(notifications => {
+      for (const id of Object.keys(notifications)) {
+        browser.notifications.clear(id);
+      }
+    });
+  }
+});
+
+browser.storage.local.get('notifications').then(({ notifications }) => notificationsEnabled = notifications);
+
 function displaySuccessNotification(id, source, destination) {
+  if (!notificationsEnabled) {
+    return;
+  }
+
   browser.notifications.create(id, {
     type: 'basic',
     title: browser.i18n.getMessage("notificationSuccessTitle"),
@@ -18,6 +41,10 @@ function displaySuccessNotification(id, source, destination) {
 }
 
 function displayFailureNotification(id, source, destination) {
+  if (!notificationsEnabled) {
+    return;
+  }
+
   browser.notifications.create(id, {
     type: 'basic',
     title: browser.i18n.getMessage("notificationFailureTitle"),
