@@ -34,5 +34,8 @@
     "wait-on": "^3.2.0",
     "web-ext": "^2.9.3",
     "webextension-toolbox": "latest"
+  },
+  "dependencies": {
+    "@mdi/js": "^3.4.93"
   }
 }

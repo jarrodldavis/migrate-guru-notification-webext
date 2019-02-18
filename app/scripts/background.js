@@ -1,4 +1,5 @@
 import { STATUS } from './constants';
+import { SUCCESS_ICON_URL, FAILURE_ICON_URL } from './icons';
 
 const MIGRATE_GURU_HOSTNAME = 'mg.blogvault.net';
 const MIGRATE_GURU_PATHNAME = '/migration/';
@@ -28,3 +29,11 @@ browser.runtime.onMessage.addListener(function({ id, status, source, destination
 });
 
 console.log(`'Allo 'Allo! Event Page for Page Action`)
+
+console.log('test notification with icon', SUCCESS_ICON_URL);
+browser.notifications.create({
+  type: 'image',
+  title: 'Test',
+  message: 'Test',
+  iconUrl: FAILURE_ICON_URL
+});
