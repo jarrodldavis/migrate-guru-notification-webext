@@ -14,5 +14,47 @@
   "browserActionTitle": {
     "message": "Migrate Guru Notifications",
     "description": "The title of the browser action button"
+  },
+  "notificationSuccessTitle": {
+    "message": "Migration Succeeded",
+    "description": "The title of the success notification"
+  },
+  "notificationSuccessMessage": {
+    "message": "'$source$' $arrow$ '$destination$'",
+    "description": "The message of the success notification",
+    "placeholders": {
+      "source": {
+        "content": "$1",
+        "example": "blog.example.com"
+      },
+      "arrow": {
+        "content": "\u2192"
+      },
+      "destination": {
+        "content": "$2",
+        "example": "blog.example.net"
+      }
+    }
+  },
+  "notificationFailureTitle": {
+    "message": "Migration Failed",
+    "description": "The title of the failure notification"
+  },
+  "notificationFailureMessage": {
+    "message": "'$source$' $arrow$ '$destination$'",
+    "description": "The message of the failure notification",
+    "placeholders": {
+      "source": {
+        "content": "$1",
+        "example": "blog.example.com"
+      },
+      "arrow": {
+        "content": "\u2192"
+      },
+      "destination": {
+        "content": "$2",
+        "example": "blog.example.net"
+      }
+    }
   }
 }
