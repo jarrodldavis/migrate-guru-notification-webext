@@ -1,8 +1,6 @@
 import { STATUS } from './constants.json';
 import { outputs as icons } from '../images.json';
 
-console.log(`'Allo 'Allo! Content script`)
-
 const APP_ROOT_SELECTOR = '#app';
 const URL_SELECTOR = '.bv-plan-container p > strong, .bv-landing-para';
 const SUCCESS_ICON_SELECTOR = '.mdi-check-circle-outline';
