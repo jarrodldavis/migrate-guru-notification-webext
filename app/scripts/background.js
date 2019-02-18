@@ -18,11 +18,11 @@ if (process.env.VENDOR !== 'firefox') {
   });
 }
 
-browser.runtime.onMessage.addListener(function({ status, source, destination }) {
+browser.runtime.onMessage.addListener(function({ id, status, source, destination }) {
   const sourceHost = status === STATUS.NOT_STARTED ? null : new URL(source).hostname;
   const destinationHost = status === STATUS.NOT_STARTED ? null : new URL(destination).hostname;
 
-  console.log('migration update:', status,
+  console.log('migration update:', id, status,
               'from:', sourceHost,
               'to:', destinationHost);
 });

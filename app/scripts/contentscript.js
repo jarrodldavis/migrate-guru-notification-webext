@@ -9,6 +9,11 @@ const FAILURE_ICON_SELECTOR = '.mdi-close-circle-outline';
 
 const appElement = document.querySelector(APP_ROOT_SELECTOR);
 
+function getMigrationId() {
+  // get the last non-empty path segment
+  return window.location.pathname.split('/').reverse().find(segment => segment.length > 0);
+}
+
 function getUrls() {
   const [sourceElement, destinationElement] = appElement.querySelectorAll(URL_SELECTOR);
 
@@ -28,6 +33,7 @@ function getUrls() {
 }
 
 const observer = new MutationObserver(function mutationCallback() {
+  const id = getMigrationId();
   const { source, destination } = getUrls();
   const success = appElement.querySelector(SUCCESS_ICON_SELECTOR);
   const failure = appElement.querySelector(FAILURE_ICON_SELECTOR);
@@ -43,7 +49,7 @@ const observer = new MutationObserver(function mutationCallback() {
     status = STATUS.IN_PROGRESS;
   }
 
-  browser.runtime.sendMessage({ status, source, destination });
+  browser.runtime.sendMessage({ id, status, source, destination });
 });
 
 observer.observe(appElement, { childList: true, subtree: true });
