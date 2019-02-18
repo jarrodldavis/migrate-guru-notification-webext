@@ -1,4 +1,5 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -8,12 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   CI configuration for Firefox and Chrome ([#1]), ([#12])
--   WebExtension skeleton refinements ([#2]), ([#4])
 -   Initial implementation: basic support migration completion events using notifications and favicons ([#5]), ([#8])
--   Browser development workflows for Chrome and Firefox ([#3]), ([#6])
 -   Page Action popup ([#9])
 -   Global Options ([#10])
+
+-   CI configuration for Firefox and Chrome ([#1]), ([#12])
+-   WebExtension skeleton refinements ([#2]), ([#4])
+-   Browser development workflows for Firefox and Chrome ([#3]), ([#6])
 -   Build-time refinements ([#7]), ([#11])
 
 [#1]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/1
