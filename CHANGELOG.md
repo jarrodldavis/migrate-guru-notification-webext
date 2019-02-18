@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Features and Fixes
+
 -   Initial implementation: basic support migration completion events using notifications and favicons ([#5]), ([#8])
 -   Page Action popup ([#9])
 -   Global Options ([#10])
+
+#### Development and CI
 
 -   CI configuration for Firefox and Chrome ([#1]), ([#12])
 -   WebExtension skeleton refinements ([#2]), ([#4])
