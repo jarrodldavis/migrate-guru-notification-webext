@@ -82,3 +82,6 @@ typings/
 .dynamodb/
 
 
+### webextension-toolbox
+dist/
+packages/

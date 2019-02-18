@@ -1,0 +1,18 @@
+{
+  "appName": {
+    "message": "Migrate Guru Notifications",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "Migrate Guru",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "Add notifications for Migrate Guru migrations",
+    "description": "The description of the application"
+  },
+  "browserActionTitle": {
+    "message": "Migrate Guru Notifications",
+    "description": "The title of the browser action button"
+  }
+}

@@ -1,9 +1,11 @@
 {
   "name": "@jarrodldavis/migrate-guru-notification-webext",
   "version": "0.0.1",
-  "description": "Add notifications to Migrate Guru migrations",
+  "description": "Add notifications for Migrate Guru migrations",
   "main": "src/manifest.json",
   "scripts": {
+    "dev": "webextension-toolbox dev",
+    "build": "webextension-toolbox build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/jarrodldavis/migrate-guru-notification-webext/issues"
   },
-  "homepage": "https://github.com/jarrodldavis/migrate-guru-notification-webext#readme"
+  "homepage": "https://github.com/jarrodldavis/migrate-guru-notification-webext#readme",
+  "devDependencies": {
+    "webextension-toolbox": "latest"
+  }
 }
