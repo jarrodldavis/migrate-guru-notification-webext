@@ -39,11 +39,11 @@
 
     <div class="panel-list-item">
       <span class="text">{i18n('popupNotificationListItem')}</span>
-      <span class="text-shortcut">{optionStatus(notification)}</span>
+      <span class="text-shortcut">{optionStatus(notifications)}</span>
     </div>
     <div class="panel-list-item">
       <span class="text">{i18n('popupFaviconListItem')}</span>
-      <span class="text-shortcut">{optionStatus(favicon)}</span>
+      <span class="text-shortcut">{optionStatus(favicons)}</span>
     </div>
   </div>
 
@@ -82,6 +82,15 @@
 
         this.set({ status, source, destination });
       });
+
+      this.set(await browser.storage.local.get(['notifications', 'favicons']));
+
+      browser.storage.onChanged.addListener(({ notifications, favicons }) => {
+        this.set({
+          notifications: notifications.newValue,
+          favicons: favicons.newValue,
+        })
+      });
     },
     helpers: {
       process,
@@ -104,8 +113,8 @@
         status: STATUS.NOT_STARTED,
         source: null,
         destination: null,
-        notification: true,
-        favicon: true
+        notifications: true,
+        favicons: true
       }
     },
     computed: {
