@@ -112,5 +112,14 @@
   "statusFailure": {
     "message": "Failed",
     "description": "The status indicating a migration has completed but failed"
+  },
+  "optionsNotifications": {
+    "message": "Notifications",
+    "description": "The checkbox label for the notifications setting in the options page"
+  },
+  "optionsFavicons": {
+    "message": "Favicons",
+    "description": "The checkbox label for the favicons setting in the options page"
   }
+
 }

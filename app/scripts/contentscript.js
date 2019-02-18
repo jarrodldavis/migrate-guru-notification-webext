@@ -23,6 +23,19 @@ const headElement = document.querySelector('head');
 
 const appElement = document.querySelector(APP_ROOT_SELECTOR);
 
+let faviconsEnabled = true;
+
+browser.storage.onChanged.addListener(function(changes) {
+  if (changes.favicons === undefined) {
+    return;
+  }
+
+  faviconsEnabled = changes.favicons.newValue;
+  updateFavicon(getMigrationData().status);
+});
+
+browser.storage.local.get({ favicons: true }).then(({ favicons }) => faviconsEnabled = favicons);
+
 function getMigrationId() {
   // get the last non-empty path segment
   return window.location.pathname.split('/').reverse().find(segment => segment.length > 0);
@@ -46,13 +59,22 @@ function getUrls() {
   return { source, destination };
 }
 
-function updateFavicon(status) {
+function restoreFavicon() {
+  SUCCESS_FAVICON_ELEMENT.remove();
+  FAILURE_FAVICON_ELEMENT.remove();
+  headElement.append(defaultFaviconElement);
+}
+
+async function updateFavicon(status) {
+  if (!faviconsEnabled) {
+    restoreFavicon();
+    return;
+  }
+
   switch (status) {
     case STATUS.NOT_STARTED:
     case STATUS.IN_PROGRESS:
-      SUCCESS_FAVICON_ELEMENT.remove();
-      FAILURE_FAVICON_ELEMENT.remove();
-      headElement.append(defaultFaviconElement);
+      restoreFavicon();
       return;
     case STATUS.SUCCESS:
       defaultFaviconElement.remove();
