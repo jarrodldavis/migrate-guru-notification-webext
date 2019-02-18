@@ -1,4 +1,4 @@
-import { STATUS } from './constants';
+import { STATUS } from './constants.json';
 import { outputs as icons } from '../images.json';
 
 const MIGRATE_GURU_HOSTNAME = 'mg.blogvault.net';
