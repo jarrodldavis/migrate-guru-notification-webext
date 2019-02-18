@@ -19,6 +19,8 @@ SUCCESS_FAVICON_ELEMENT.type = 'image/x-icon';
 FAILURE_FAVICON_ELEMENT.href = browser.runtime.getURL(icons.FAILURE_FAVICON.filePath);
 
 const defaultFaviconElement = document.querySelector('link[rel="shortcut icon"]');
+const headElement = document.querySelector('head');
+
 const appElement = document.querySelector(APP_ROOT_SELECTOR);
 
 function getMigrationId() {
@@ -50,12 +52,17 @@ function updateFavicon(status) {
     case STATUS.IN_PROGRESS:
       SUCCESS_FAVICON_ELEMENT.remove();
       FAILURE_FAVICON_ELEMENT.remove();
+      headElement.append(defaultFaviconElement);
       return;
     case STATUS.SUCCESS:
-      defaultFaviconElement.insertAdjacentElement('afterend', SUCCESS_FAVICON_ELEMENT);
+      defaultFaviconElement.remove();
+      FAILURE_FAVICON_ELEMENT.remove();
+      headElement.append(SUCCESS_FAVICON_ELEMENT);
       return;
     case STATUS.FAILURE:
-      defaultFaviconElement.insertAdjacentElement('afterend', FAILURE_FAVICON_ELEMENT);
+      defaultFaviconElement.remove();
+      SUCCESS_FAVICON_ELEMENT.remove();
+      headElement.append(FAILURE_FAVICON_ELEMENT);
       return;
     default:
       throw new Error(`Unexpected status '${status}'.`);

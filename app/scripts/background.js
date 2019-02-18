@@ -10,7 +10,7 @@ browser.runtime.onInstalled.addListener((details) => {
 
 function displaySuccessNotification(id, source, destination) {
   browser.notifications.create(id, {
-    type: 'image',
+    type: 'basic',
     title: browser.i18n.getMessage("notificationSuccessTitle"),
     message: browser.i18n.getMessage("notificationSuccessMessage", [source, destination]),
     iconUrl: browser.runtime.getURL(icons.SUCCESS_NOTIFICATION.filePath)
@@ -19,7 +19,7 @@ function displaySuccessNotification(id, source, destination) {
 
 function displayFailureNotification(id, source, destination) {
   browser.notifications.create(id, {
-    type: 'image',
+    type: 'basic',
     title: browser.i18n.getMessage("notificationFailureTitle"),
     message: browser.i18n.getMessage("notificationFailureMessage", [source, destination]),
     iconUrl: browser.runtime.getURL(icons.FAILURE_NOTIFICATION.filePath)
