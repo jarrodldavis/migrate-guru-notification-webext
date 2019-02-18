@@ -25,8 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Development and CI
 
--   CI configuration for Firefox and Chrome ([#1], [#12])
--   `npm version` configuration ([#17], [#18])
+-   CI configuration for Firefox and Chrome ([#1])
+-   `npm version` configuration ([#12], [#17], [#18])
 -   WebExtension skeleton refinements ([#2], [#4], [#14], [#16])
 -   Browser development workflows for Firefox and Chrome ([#3], [#6])
 -   Build-time refinements ([#7], [#11])
