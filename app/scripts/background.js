@@ -4,10 +4,6 @@ import { outputs as icons } from '../images.json';
 const MIGRATE_GURU_HOSTNAME = 'mg.blogvault.net';
 const MIGRATE_GURU_PATHNAME = '/migration/';
 
-browser.runtime.onInstalled.addListener((details) => {
-  console.log('previousVersion', details.previousVersion)
-})
-
 let notificationsEnabled = true;
 
 browser.storage.onChanged.addListener(function(changes) {
@@ -82,5 +78,3 @@ browser.runtime.onMessage.addListener(function({ id, status, source, destination
       throw new Error(`Unexpected status '${status}'.`);
   }
 });
-
-console.log(`'Allo 'Allo! Event Page for Page Action`)
