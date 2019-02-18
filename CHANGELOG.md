@@ -11,16 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Features and Fixes
 
--   Initial implementation: basic support migration completion events using notifications and favicons ([#5]), ([#8])
+-   Initial implementation: basic support migration completion events using notifications and favicons ([#5], [#8])
 -   Page Action popup ([#9])
 -   Global Options ([#10])
 
 #### Development and CI
 
--   CI configuration for Firefox and Chrome ([#1]), ([#12])
--   WebExtension skeleton refinements ([#2]), ([#4])
--   Browser development workflows for Firefox and Chrome ([#3]), ([#6])
--   Build-time refinements ([#7]), ([#11])
+-   CI configuration for Firefox and Chrome ([#1], [#12])
+-   WebExtension skeleton refinements ([#2], [#4])
+-   Browser development workflows for Firefox and Chrome ([#3], [#6])
+-   Build-time refinements ([#7], [#11])
 
 [#1]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/1
 
