@@ -1,0 +1,3 @@
+[submodule "photon-extension-kit"]
+	path = photon-extension-kit
+	url = git://github.com/FirefoxUX/photon-extension-kit.git

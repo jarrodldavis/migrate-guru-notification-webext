@@ -1,3 +1,9 @@
+<svelte:head>
+  {#if process.env.VENDOR !== 'firefox'}
+    <link rel="stylesheet" href="../styles/extension.css" />
+  {/if}
+</svelte:head>
+
 <div class="panel">
   <div class="panel-section panel-section-header">
     <img class="icon-section-header" src={icon('POPUP_HEADER')} alt="Header Icon" />
@@ -78,6 +84,7 @@
       });
     },
     helpers: {
+      process,
       icon(name) {
         return browser.runtime.getURL(icons[name].filePath);
       },
