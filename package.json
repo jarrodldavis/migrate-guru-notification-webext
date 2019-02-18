@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webextension-toolbox dev",
     "dev:firefox": "concurrently -k -i -n run,build 'npm:open:firefox' 'npm:dev firefox'",
+    "dev:chrome": "concurrently -k -i -n run,build 'npm:open:chrome' 'npm:dev chrome'",
     "open:firefox": "wait-on dist/firefox/manifest.json && ./scripts/clean-env web-ext run -s dist/firefox",
+    "open:chrome": "wait-on dist/chrome/manifest.json && ./scripts/open-chrome dist/chrome",
     "build": "webextension-toolbox build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:firefox": "./scripts/clean-env web-ext lint -w -s ./dist/firefox",
@@ -30,6 +32,7 @@
   },
   "homepage": "https://github.com/jarrodldavis/migrate-guru-notification-webext#readme",
   "devDependencies": {
+    "chrome-launcher": "^0.10.5",
     "concurrently": "^4.1.0",
     "wait-on": "^3.2.0",
     "web-ext": "^2.9.3",
