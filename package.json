@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/jarrodldavis/migrate-guru-notification-webext#readme",
   "devDependencies": {
+    "web-ext": "^2.9.3",
     "webextension-toolbox": "latest"
   }
 }
