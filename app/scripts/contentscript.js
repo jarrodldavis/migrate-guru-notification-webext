@@ -70,7 +70,7 @@ function updateFavicon(status) {
   }
 }
 
-const observer = new MutationObserver(function mutationCallback() {
+function getMigrationData() {
   const id = getMigrationId();
   const { source, destination } = getUrls();
   const success = appElement.querySelector(SUCCESS_ICON_SELECTOR);
@@ -87,8 +87,13 @@ const observer = new MutationObserver(function mutationCallback() {
     status = STATUS.IN_PROGRESS;
   }
 
-  browser.runtime.sendMessage({ id, status, source, destination });
-  updateFavicon(status);
+  return { id, status, source, destination };
+}
+
+const observer = new MutationObserver(function mutationCallback() {
+  const data = getMigrationData();
+  browser.runtime.sendMessage(data);
+  updateFavicon(data.status);
 });
 
 observer.observe(appElement, { childList: true, subtree: true });
