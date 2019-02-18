@@ -96,4 +96,8 @@ const observer = new MutationObserver(function mutationCallback() {
   updateFavicon(data.status);
 });
 
+browser.runtime.onMessage.addListener(async function() {
+  return getMigrationData();
+});
+
 observer.observe(appElement, { childList: true, subtree: true });

@@ -30,6 +30,7 @@
     },
     "default_title": "__MSG_browserActionTitle__",
     "default_popup": "pages/popup.html",
+    "__firefox__browser_style": true,
     "__firefox__show_matches": [
       "*://mg.blogvault.net/migration/*"
     ]

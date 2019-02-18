@@ -1,0 +1,9 @@
+.panel-list-item > span + span {
+  margin-left: 2em;
+}
+
+.panel-section-footer-button.disabled {
+  color: #888;
+  background-color: transparent;
+  box-shadow: none;
+}
