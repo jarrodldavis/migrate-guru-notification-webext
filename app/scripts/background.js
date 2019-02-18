@@ -1,5 +1,5 @@
 import { STATUS } from './constants';
-import { SUCCESS_ICON_URL, FAILURE_ICON_URL } from './icons';
+import { outputs as icons } from '../images.json';
 
 const MIGRATE_GURU_HOSTNAME = 'mg.blogvault.net';
 const MIGRATE_GURU_PATHNAME = '/migration/';
@@ -13,7 +13,7 @@ function displaySuccessNotification(id, source, destination) {
     type: 'image',
     title: browser.i18n.getMessage("notificationSuccessTitle"),
     message: browser.i18n.getMessage("notificationSuccessMessage", [source, destination]),
-    iconUrl: SUCCESS_ICON_URL
+    iconUrl: browser.runtime.getURL(icons.SUCCESS_NOTIFICATION.filePath)
   });
 }
 
@@ -22,7 +22,7 @@ function displayFailureNotification(id, source, destination) {
     type: 'image',
     title: browser.i18n.getMessage("notificationFailureTitle"),
     message: browser.i18n.getMessage("notificationFailureMessage", [source, destination]),
-    iconUrl: FAILURE_ICON_URL
+    iconUrl: browser.runtime.getURL(icons.FAILURE_NOTIFICATION.filePath)
   });
 }
 

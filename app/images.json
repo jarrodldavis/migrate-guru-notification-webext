@@ -33,6 +33,38 @@
       "width": 38,
       "height": 38,
       "fillColor": "rgb(127, 127, 127)"
+    },
+    "SUCCESS_NOTIFICATION": {
+      "icon": "CheckCircleOutline",
+      "filePath": "images/success-notification.png",
+      "format": "png",
+      "width": 96,
+      "height": 96,
+      "fillColor": "rgb(36, 145, 130)"
+    },
+    "SUCCESS_FAVICON": {
+      "icon": "CheckCircle",
+      "filePath": "images/success-favicon.png",
+      "format": "png",
+      "width": 96,
+      "height": 96,
+      "fillColor": "rgb(36, 145, 130)"
+    },
+    "FAILURE_NOTIFICATION": {
+      "icon": "CloseCircleOutline",
+      "filePath": "images/failure-notification.png",
+      "format": "png",
+      "width": 96,
+      "height": 96,
+      "fillColor": "rgb(208, 2, 27)"
+    },
+    "FAILURE_FAVICON": {
+      "icon": "CloseCircle",
+      "filePath": "images/failure-favicon.png",
+      "format": "png",
+      "width": 96,
+      "height": 96,
+      "fillColor": "rgb(208, 2, 27)"
     }
   }
 }

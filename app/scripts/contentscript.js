@@ -1,5 +1,5 @@
 import { STATUS } from './constants';
-import { SMALL_SUCCESS_ICON_URL, SMALL_FAILURE_ICON_URL } from './icons';
+import { outputs as icons } from '../images.json';
 
 console.log(`'Allo 'Allo! Content script`)
 
@@ -10,13 +10,13 @@ const FAILURE_ICON_SELECTOR = '.mdi-close-circle-outline';
 
 const SUCCESS_FAVICON_ELEMENT = document.createElement('link');
 SUCCESS_FAVICON_ELEMENT.relList.add('shortcut', 'icon');
-SUCCESS_FAVICON_ELEMENT.type = 'image/svg+xml';
-SUCCESS_FAVICON_ELEMENT.href = SMALL_SUCCESS_ICON_URL;
+SUCCESS_FAVICON_ELEMENT.type = 'image/x-icon';
+SUCCESS_FAVICON_ELEMENT.href = browser.runtime.getURL(icons.SUCCESS_FAVICON.filePath);
 
 const FAILURE_FAVICON_ELEMENT = document.createElement('link');
 FAILURE_FAVICON_ELEMENT.relList.add('shortcut', 'icon');
-FAILURE_FAVICON_ELEMENT.type = 'image/svg+xml';
-FAILURE_FAVICON_ELEMENT.href = SMALL_FAILURE_ICON_URL;
+SUCCESS_FAVICON_ELEMENT.type = 'image/x-icon';
+FAILURE_FAVICON_ELEMENT.href = browser.runtime.getURL(icons.FAILURE_FAVICON.filePath);
 
 const defaultFaviconElement = document.querySelector('link[rel="shortcut icon"]');
 const appElement = document.querySelector(APP_ROOT_SELECTOR);

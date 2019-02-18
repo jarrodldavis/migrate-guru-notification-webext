@@ -58,5 +58,8 @@
     "storage",
     "tabs",
     "*://mg.blogvault.net/migration/*"
+  ],
+  "web_accessible_resources": [
+    "images/*.png"
   ]
 }
