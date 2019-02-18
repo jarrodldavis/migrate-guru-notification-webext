@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webextension-toolbox dev",
     "build": "webextension-toolbox build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:firefox": "./scripts/clean-env web-ext lint -w -s ./dist/firefox",
+    "submit:firefox": "web-ext sign -s ./dist/firefox/ -a ./packages/"
   },
   "repository": {
     "type": "git",
