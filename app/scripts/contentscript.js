@@ -1,4 +1,5 @@
 import { STATUS } from './constants';
+import { SMALL_SUCCESS_ICON_URL, SMALL_FAILURE_ICON_URL } from './icons';
 
 console.log(`'Allo 'Allo! Content script`)
 
@@ -7,6 +8,17 @@ const URL_SELECTOR = '.bv-plan-container p > strong, .bv-landing-para';
 const SUCCESS_ICON_SELECTOR = '.mdi-check-circle-outline';
 const FAILURE_ICON_SELECTOR = '.mdi-close-circle-outline';
 
+const SUCCESS_FAVICON_ELEMENT = document.createElement('link');
+SUCCESS_FAVICON_ELEMENT.relList.add('shortcut', 'icon');
+SUCCESS_FAVICON_ELEMENT.type = 'image/svg+xml';
+SUCCESS_FAVICON_ELEMENT.href = SMALL_SUCCESS_ICON_URL;
+
+const FAILURE_FAVICON_ELEMENT = document.createElement('link');
+FAILURE_FAVICON_ELEMENT.relList.add('shortcut', 'icon');
+FAILURE_FAVICON_ELEMENT.type = 'image/svg+xml';
+FAILURE_FAVICON_ELEMENT.href = SMALL_FAILURE_ICON_URL;
+
+const defaultFaviconElement = document.querySelector('link[rel="shortcut icon"]');
 const appElement = document.querySelector(APP_ROOT_SELECTOR);
 
 function getMigrationId() {
@@ -32,6 +44,25 @@ function getUrls() {
   return { source, destination };
 }
 
+function updateFavicon(status) {
+  switch (status) {
+    case STATUS.NOT_STARTED:
+    case STATUS.IN_PROGRESS:
+      SUCCESS_FAVICON_ELEMENT.remove();
+      FAILURE_FAVICON_ELEMENT.remove();
+      return;
+    case STATUS.SUCCESS:
+      defaultFaviconElement.insertAdjacentElement('afterend', SUCCESS_FAVICON_ELEMENT);
+      return;
+    case STATUS.FAILURE:
+      defaultFaviconElement.insertAdjacentElement('afterend', FAILURE_FAVICON_ELEMENT);
+      return;
+    default:
+      throw new Error(`Unexpected status '${status}'.`);
+
+  }
+}
+
 const observer = new MutationObserver(function mutationCallback() {
   const id = getMigrationId();
   const { source, destination } = getUrls();
@@ -50,6 +81,7 @@ const observer = new MutationObserver(function mutationCallback() {
   }
 
   browser.runtime.sendMessage({ id, status, source, destination });
+  updateFavicon(status);
 });
 
 observer.observe(appElement, { childList: true, subtree: true });

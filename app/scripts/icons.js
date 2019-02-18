@@ -1,4 +1,4 @@
-import { mdiCheckCircleOutline, mdiCloseCircleOutline } from '@mdi/js';
+import { mdiCheckCircleOutline, mdiCheckCircle, mdiCloseCircleOutline, mdiCloseCircle } from '@mdi/js';
 
 const NATURAL_WIDTH = 24;
 const NATURAL_HEIGHT = 24;
@@ -18,4 +18,7 @@ function dataUrl(svg) {
 }
 
 export const SUCCESS_ICON_URL = dataUrl(svg(mdiCheckCircleOutline, "rgb(36, 145, 130)"));
+export const SMALL_SUCCESS_ICON_URL = dataUrl(svg(mdiCheckCircle, "rgb(36, 145, 130)"));
+
 export const FAILURE_ICON_URL = dataUrl(svg(mdiCloseCircleOutline, "rgb(208, 2, 27)"));
+export const SMALL_FAILURE_ICON_URL = dataUrl(svg(mdiCloseCircle, "rgb(208, 2, 27)"));
