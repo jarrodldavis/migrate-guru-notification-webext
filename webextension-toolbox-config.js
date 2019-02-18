@@ -13,7 +13,19 @@ const plugins = Object.values(outputs).map(output => {
 });
 
 module.exports = {
+  // https://github.com/webextension-toolbox/webextension-toolbox/blob/0183506baaf96eb0ae56cd70da71807bc8dbb65d/src/webpack-config.js#L19
+  copyIgnore: ['**/*.js', '**/*.json', '**/*.svelte'],
   webpack(config) {
+    config.module.rules.push({
+      test: /\.svelte$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'svelte-loader',
+        options: {
+          css: false
+        }
+      }
+    });
     config.plugins.unshift(...plugins);
     return config;
   }
