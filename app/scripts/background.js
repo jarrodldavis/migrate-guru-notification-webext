@@ -1,3 +1,5 @@
+import { STATUS } from './constants';
+
 const MIGRATE_GURU_HOSTNAME = 'mg.blogvault.net';
 const MIGRATE_GURU_PATHNAME = '/migration/';
 
@@ -15,5 +17,14 @@ if (process.env.VENDOR !== 'firefox') {
     }
   });
 }
+
+browser.runtime.onMessage.addListener(function({ status, source, destination }) {
+  const sourceHost = status === STATUS.NOT_STARTED ? null : new URL(source).hostname;
+  const destinationHost = status === STATUS.NOT_STARTED ? null : new URL(destination).hostname;
+
+  console.log('migration update:', status,
+              'from:', sourceHost,
+              'to:', destinationHost);
+});
 
 console.log(`'Allo 'Allo! Event Page for Page Action`)
