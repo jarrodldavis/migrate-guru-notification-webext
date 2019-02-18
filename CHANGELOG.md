@@ -15,6 +15,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Page Action popup ([#9])
 -   Global Options ([#10])
 
+[#5]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/5
+
+[#8]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/8
+
+[#9]: https://github.com/jarrodldavis/migrate-guru-notification-webext/pull/9
+
+[#10]: https://github.com/jarrodldavis/migrate-guru-notification-webext/pull/10
+
 #### Development and CI
 
 -   CI configuration for Firefox and Chrome ([#1], [#12])
@@ -32,17 +40,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [#14]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/14
 
-[#5]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/5
-
-[#8]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/8
-
 [#3]: https://github.com/jarrodldavis/migrate-guru-notification-webext/pull/3
 
 [#6]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/6
-
-[#9]: https://github.com/jarrodldavis/migrate-guru-notification-webext/pull/9
-
-[#10]: https://github.com/jarrodldavis/migrate-guru-notification-webext/pull/10
 
 [#7]: https://github.com/jarrodldavis/migrate-guru-notification-webext/pull/7
 
