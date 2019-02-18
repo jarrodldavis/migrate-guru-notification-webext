@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Features and Fixes
 
--   Initial implementation: basic support migration completion events using notifications and favicons ([#5], [#8])
+-   Initial implementation: basic support for migration completion events using notifications and favicons ([#5], [#8])
 -   Page Action popup ([#9])
 -   Global Options ([#10])
 
