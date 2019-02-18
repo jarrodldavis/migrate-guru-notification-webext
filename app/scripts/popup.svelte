@@ -83,7 +83,7 @@
         this.set({ status, source, destination });
       });
 
-      this.set(await browser.storage.local.get(['notifications', 'favicons']));
+      this.set(await browser.storage.local.get({ notifications: true, favicons: true }));
 
       browser.storage.onChanged.addListener(({ notifications, favicons }) => {
         this.set({

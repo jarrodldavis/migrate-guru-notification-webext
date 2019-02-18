@@ -34,7 +34,7 @@ browser.storage.onChanged.addListener(function(changes) {
   updateFavicon(getMigrationData().status);
 });
 
-browser.storage.local.get('favicons').then(({ favicons }) => faviconsEnabled = favicons);
+browser.storage.local.get({ favicons: true }).then(({ favicons }) => faviconsEnabled = favicons);
 
 function getMigrationId() {
   // get the last non-empty path segment

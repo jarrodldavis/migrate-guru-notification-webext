@@ -25,7 +25,7 @@ browser.storage.onChanged.addListener(function(changes) {
   }
 });
 
-browser.storage.local.get('notifications').then(({ notifications }) => notificationsEnabled = notifications);
+browser.storage.local.get({ notifications: true }).then(({ notifications }) => notificationsEnabled = notifications);
 
 function displaySuccessNotification(id, source, destination) {
   if (!notificationsEnabled) {
