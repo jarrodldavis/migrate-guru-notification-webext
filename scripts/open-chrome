@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const launcher = require('chrome-launcher');
+
+const extensionDirectory = path.resolve(process.cwd(), process.argv[2]);
+console.log(extensionDirectory);
+
+launcher.launch({
+  enableExtensions: true,
+  chromeFlags: [
+    `--load-extension=${extensionDirectory}`
+  ]
+}).then(chrome => {
+  console.log(`Chrome is running as process ${chrome.pid}.`)
+}).catch(error => {
+  console.error('Error launching Chrome:', error);
+});
