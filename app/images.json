@@ -34,6 +34,14 @@
       "height": 38,
       "fillColor": "rgb(127, 127, 127)"
     },
+    "POPUP_HEADER": {
+      "icon": "TruckFast",
+      "filePath": "images/popup-header.png",
+      "format": "png",
+      "width": 32,
+      "height": 32,
+      "fillColor": "rgb(75, 90, 113)"
+    },
     "SUCCESS_NOTIFICATION": {
       "icon": "CheckCircleOutline",
       "filePath": "images/success-notification.png",
