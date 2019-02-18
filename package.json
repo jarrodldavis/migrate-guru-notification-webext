@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/jarrodldavis/migrate-guru-notification-webext#readme",
   "devDependencies": {
+    "@jarrodldavis/rasterize-svg-path-webpack-plugin": "^0.1.0",
     "chrome-launcher": "^0.10.5",
     "concurrently": "^4.1.0",
     "wait-on": "^3.2.0",

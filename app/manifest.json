@@ -15,8 +15,8 @@
   },
   "default_locale": "en",
   "icons": {
-    "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
+    "16": "images/main-small.png",
+    "128": "images/main-large.png"
   },
   "background": {
     "scripts": [
@@ -25,8 +25,8 @@
   },
   "page_action": {
     "default_icon": {
-      "19": "images/icon-19.png",
-      "38": "images/icon-38.png"
+      "19": "images/page-action-small.png",
+      "38": "images/page-action-large.png"
     },
     "default_title": "__MSG_browserActionTitle__",
     "default_popup": "pages/popup.html",
