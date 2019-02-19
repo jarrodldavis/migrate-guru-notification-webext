@@ -1,6 +1,6 @@
 {
   "name": "@jarrodldavis/migrate-guru-notification-webext",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Add notifications for Migrate Guru migrations",
   "main": "src/manifest.json",
   "scripts": {
