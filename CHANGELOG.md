@@ -28,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   CI configuration for Firefox and Chrome ([#1])
 -   `npm version` configuration ([#12], [#17], [#18])
 -   WebExtension skeleton refinements ([#2], [#4], [#14], [#16])
--   Browser development workflows for Firefox and Chrome ([#3], [#6])
+-   Browser development workflows for Firefox and Chrome ([#3], [#6], [#20])
 -   Build-time refinements ([#7], [#11])
 
 [#1]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/1
@@ -50,6 +50,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#3]: https://github.com/jarrodldavis/migrate-guru-notification-webext/pull/3
 
 [#6]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/6
+
+[#20]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/20
 
 [#7]: https://github.com/jarrodldavis/migrate-guru-notification-webext/pull/7
 

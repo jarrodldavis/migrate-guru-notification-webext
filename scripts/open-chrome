@@ -9,7 +9,13 @@ console.log(`Running web extension from ${extensionDirectory}`);
 launcher.launch({
   enableExtensions: true,
   chromeFlags: [
-    `--load-extension=${extensionDirectory}`
+    // load built extension
+    `--load-extension=${extensionDirectory}`,
+    // disable infobars for Google API Keys and Default Browser check
+    // disable Developer Mode Extensions popup
+    '--enable-automation',
+    // disable automation infobar ("Chrome is being controlled by automated test software")
+    '--disable-infobars'
   ]
 }).then(chrome => {
   console.log(`Chrome is running as process ${chrome.pid}.`)
