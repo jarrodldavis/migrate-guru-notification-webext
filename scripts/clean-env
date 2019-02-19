@@ -1,0 +1,12 @@
+#! /usr/bin/env node
+
+const childProcess = require('child_process');
+
+// https://github.com/mozilla/web-ext/issues/793
+delete process.env.WEB_EXT_API_KEY;
+delete process.env.WEB_EXT_API_SECRET;
+
+childProcess.execSync(process.argv.slice(2).join(' '), {
+  stdio: 'inherit',
+  env: process.env
+});

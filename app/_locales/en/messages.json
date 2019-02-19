@@ -14,5 +14,112 @@
   "browserActionTitle": {
     "message": "Migrate Guru Notifications",
     "description": "The title of the browser action button"
+  },
+  "notificationSuccessTitle": {
+    "message": "Migration Succeeded",
+    "description": "The title of the success notification"
+  },
+  "notificationSuccessMessage": {
+    "message": "'$source$' $arrow$ '$destination$'",
+    "description": "The message of the success notification",
+    "placeholders": {
+      "source": {
+        "content": "$1",
+        "example": "blog.example.com"
+      },
+      "arrow": {
+        "content": "\u2192"
+      },
+      "destination": {
+        "content": "$2",
+        "example": "blog.example.net"
+      }
+    }
+  },
+  "notificationFailureTitle": {
+    "message": "Migration Failed",
+    "description": "The title of the failure notification"
+  },
+  "notificationFailureMessage": {
+    "message": "'$source$' $arrow$ '$destination$'",
+    "description": "The message of the failure notification",
+    "placeholders": {
+      "source": {
+        "content": "$1",
+        "example": "blog.example.com"
+      },
+      "arrow": {
+        "content": "\u2192"
+      },
+      "destination": {
+        "content": "$2",
+        "example": "blog.example.net"
+      }
+    }
+  },
+  "popupHeader": {
+    "message": "Migrate Guru",
+    "description": "The header text in the popup"
+  },
+  "popupSourceListItem": {
+    "message": "Source",
+    "description": "The secondary text in the source list item in the popup"
+  },
+  "popupDestinationListItem": {
+    "message": "Destination",
+    "description": "The secondary text in the destination list item in the popup"
+  },
+  "popupStatusListItem": {
+    "message": "Status",
+    "description": "The secondary text in the status list item in the popup"
+  },
+  "popupNotificationListItem": {
+    "message": "Notification",
+    "description": "The primary text in the notification list item in the popup"
+  },
+  "popupFaviconListItem": {
+    "message": "Favicon",
+    "description": "The primary text in the favicon list item in the popup"
+  },
+  "popupEnabledListItem": {
+    "message": "Enabled",
+    "description": "The secondary text of an enabled setting (notification/favicon) list item in the popup"
+  },
+  "popupDisabledListItem": {
+    "message": "Disabled",
+    "description": "The secondary text of a disabled setting (notification/favicon) list item in the popup"
+  },
+  "popupSourceButton": {
+    "message": "Visit Source Site",
+    "description": "The button for opening the source site from the popup"
+  },
+  "popupDestinationButton": {
+    "message": "Visit Destination Site",
+    "description": "The button for opening the destination site from the popup"
+  },
+  "statusNotStarted": {
+    "message": "Not Started",
+    "description": "The status indicating a migration has not yet started"
+  },
+  "statusInProgress": {
+    "message": "In Progress",
+    "description": "The status indicating a migration is currently in progress"
+  },
+  "statusSuccess": {
+    "message": "Succeeded",
+    "description": "The status indicating a migration has completed successfully"
+  },
+  "statusFailure": {
+    "message": "Failed",
+    "description": "The status indicating a migration has completed but failed"
+  },
+  "optionsNotifications": {
+    "message": "Notifications",
+    "description": "The checkbox label for the notifications setting in the options page"
+  },
+  "optionsFavicons": {
+    "message": "Favicons",
+    "description": "The checkbox label for the favicons setting in the options page"
   }
+
 }

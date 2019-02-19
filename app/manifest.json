@@ -2,12 +2,21 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_appShortName__",
   "description": "__MSG_appDescription__",
-  "version": "0.0.0",
   "manifest_version": 2,
+  "__firefox__browser_specific_settings": {
+    "gecko": {
+      "id": "migrate-guru-notification@firefox-addons.jarrodldavis.com"
+    }
+  },
+  "__firefox__applications": {
+    "gecko": {
+      "id": "migrate-guru-notification@firefox-addons.jarrodldavis.com"
+    }
+  },
   "default_locale": "en",
   "icons": {
-    "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
+    "16": "images/main-small.png",
+    "128": "images/main-large.png"
   },
   "background": {
     "scripts": [
@@ -16,13 +25,16 @@
   },
   "page_action": {
     "default_icon": {
-      "19": "images/icon-19.png",
-      "38": "images/icon-38.png"
+      "19": "images/page-action-small.png",
+      "38": "images/page-action-large.png"
     },
     "default_title": "__MSG_browserActionTitle__",
-    "default_popup": "pages/popup.html"
+    "default_popup": "pages/popup.html",
+    "__firefox__browser_style": true,
+    "__firefox__show_matches": [
+      "*://mg.blogvault.net/migration/*"
+    ]
   },
-  "options_page": "pages/options.html",
   "options_ui": {
     "page": "pages/options.html",
     "chrome_style": true
@@ -30,8 +42,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "*://mg.blogvault.net/migration/*"
       ],
       "css": [
         "styles/contentscript.css"
@@ -47,6 +58,9 @@
     "notifications",
     "storage",
     "tabs",
-    "<all_urls>"
+    "*://mg.blogvault.net/migration/*"
+  ],
+  "web_accessible_resources": [
+    "images/*.png"
   ]
 }
