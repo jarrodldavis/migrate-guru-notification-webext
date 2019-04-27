@@ -15,4 +15,4 @@
   $: url = browser.runtime.getURL(icon.filePath);
 </script>
 
-<img {...$$props} src={url} />
+<img {...$$props} src={url} alt={$$props.alt} />

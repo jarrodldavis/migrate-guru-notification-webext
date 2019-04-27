@@ -6,7 +6,6 @@ export function create_migration_store() {
   let current_tab_id;
 
   async function initialize(set) {
-    console.log('init');
     const [{ id: tab_id }] = await browser.tabs.query({ currentWindow: true, active: true });
     current_tab_id = tab_id;
     const { status, source, destination } = await browser.tabs.sendMessage(tab_id, null);
