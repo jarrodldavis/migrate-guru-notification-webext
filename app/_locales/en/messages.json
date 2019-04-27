@@ -97,6 +97,10 @@
     "message": "Visit Destination Site",
     "description": "The button for opening the destination site from the popup"
   },
+  "statusUnknown": {
+    "message": "Unknown",
+    "description": "The status indicating a migration's status is not yet known"
+  },
   "statusNotStarted": {
     "message": "Not Started",
     "description": "The status indicating a migration has not yet started"
