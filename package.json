@@ -11,7 +11,11 @@
     "open:chrome": "wait-on -l ./dist/chrome/manifest.json && ./scripts/open-chrome ./dist/chrome",
     "build": "webextension-toolbox build",
     "lint:firefox": "./scripts/clean-env web-ext lint -w -s ./dist/firefox",
-    "submit:firefox": "web-ext sign -s ./dist/firefox/ -a ./packages/"
+    "submit:firefox": "web-ext sign -s ./dist/firefox/ -a ./packages/",
+    "preversion": "run-preversion",
+    "version": "run-version",
+    "postversion": "run-postversion",
+    "mergeversion": "run-mergeversion"
   },
   "repository": {
     "type": "git",
@@ -32,6 +36,7 @@
   "homepage": "https://github.com/jarrodldavis/migrate-guru-notification-webext#readme",
   "devDependencies": {
     "@jarrodldavis/rasterize-svg-path-webpack-plugin": "^0.1.1",
+    "@jarrodldavis/version-scripts": "^0.1.0",
     "@mdi/js": "^3.6.95",
     "chrome-launcher": "^0.10.5",
     "concurrently": "^4.1.0",
