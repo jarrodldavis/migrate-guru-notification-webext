@@ -31,15 +31,15 @@
   },
   "homepage": "https://github.com/jarrodldavis/migrate-guru-notification-webext#readme",
   "devDependencies": {
-    "@jarrodldavis/rasterize-svg-path-webpack-plugin": "^0.1.0",
-    "@mdi/js": "^3.4.93",
+    "@jarrodldavis/rasterize-svg-path-webpack-plugin": "^0.1.1",
+    "@mdi/js": "^3.6.95",
     "chrome-launcher": "^0.10.5",
     "concurrently": "^4.1.0",
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^5.0.3",
     "svelte": "^2.16.1",
-    "svelte-loader": "^2.12.0",
+    "svelte-loader": "^2.13.3",
     "wait-on": "^3.2.0",
-    "web-ext": "^2.9.3",
+    "web-ext": "^3.0.0",
     "webextension-toolbox": "^3.0.0"
   },
   "dependencies": {}
