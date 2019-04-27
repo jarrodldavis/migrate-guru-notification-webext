@@ -15,7 +15,11 @@
   {#if not_started}
     <span class="text"><Status {status} /></span>
   {:else}
-    <span class="text">{hostname}</span>
+    <span class="text">
+      <span>
+        {hostname}
+      </span>
+    </span>
   {/if}
   <span class="text-shortcut"><Message key={name} /></span>
 </div>

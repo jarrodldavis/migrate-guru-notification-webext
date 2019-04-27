@@ -34,8 +34,9 @@
 
 <svelte:head>
   {#if process.env.VENDOR !== 'firefox'}
-    <link rel="stylesheet" href="../styles/extension.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/extension.css" />
   {/if}
+  <link rel="stylesheet" type="text/css" href="../styles/popup.css">
 </svelte:head>
 
 <div class="panel">
