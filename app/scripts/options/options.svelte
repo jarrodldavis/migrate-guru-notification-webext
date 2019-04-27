@@ -1,10 +1,5 @@
 <script>
-  import { create_setting_store } from '../shared/settings';
-
-  import Message from '../shared/message.svelte';
-
-  const notifications = create_setting_store('notifications', true);
-  const favicons = create_setting_store('favicons', true);
+  import FormItem from './form-item.svelte';
 </script>
 
 <svelte:head>
@@ -15,17 +10,7 @@
 
 <div class="panel">
   <div class="panel-section panel-section-formElements">
-    <div class="panel-formElements-item browser-style">
-      <input id="notifications" type="checkbox" bind:checked={$notifications} />
-      <label for="notifications" class="browser-style-label">
-        <Message key="optionsNotifications" />
-      </label>
-    </div>
-    <div class="panel-formElements-item browser-style">
-      <input id="favicons" type="checkbox" bind:checked={$favicons} />
-      <label for="favicons" class="browser-style-label">
-        <Message key="optionsFavicons" />
-      </label>
-    </div>
+    <FormItem name="optionsNotifications" setting="notifications" />
+    <FormItem name="optionsFavicons" setting="favicons" />
   </div>
 </div>
