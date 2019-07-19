@@ -21,7 +21,6 @@ module.exports = {
   webpack(config, { vendor }) {
     config.module.rules.push({
       test: /\.svelte$/,
-      exclude: /node_modules/,
       use: {
         loader: 'svelte-loader',
         options: {
@@ -37,6 +36,14 @@ module.exports = {
         from: path.resolve(__dirname, './photon-extension-kit/extension.css'),
         to: './styles/'
       }]));
+    }
+
+    config.resolve = {
+      alias: {
+        svelte: path.resolve('node_modules', 'svelte')
+      },
+      extensions: ['.mjs', '.js', '.json', '.svelte'],
+      mainFields: ['svelte', 'browser', 'module', 'main']
     }
 
     return config;
