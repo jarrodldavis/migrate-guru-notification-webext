@@ -38,7 +38,7 @@
     "@jarrodldavis/rasterize-svg-path-webpack-plugin": "^0.1.1",
     "@jarrodldavis/version-scripts": "^0.1.0",
     "@mdi/js": "^3.8.95",
-    "chrome-launcher": "^0.10.7",
+    "chrome-launcher": "^0.11.1",
     "concurrently": "^4.1.1",
     "copy-webpack-plugin": "^5.0.3",
     "svelte": "^3.6.7",

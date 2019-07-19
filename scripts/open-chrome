@@ -6,17 +6,20 @@ const launcher = require('chrome-launcher');
 const extensionDirectory = path.resolve(process.cwd(), process.argv[2]);
 console.log(`Running web extension from ${extensionDirectory}`);
 
+let flags = new Set(launcher.Launcher.defaultFlags());
+// enable extensions
+flags.delete('--disable-extensions');
+// load built extension
+flags.add(`--load-extension=${extensionDirectory}`);
+// disable infobars for Google API Keys and Default Browser check
+// disable Developer Mode Extensions popup
+flags.add('--enable-automation');
+// disable automation infobar ("Chrome is being controlled by automated test software")
+flags.add('--disable-infobars');
+
 launcher.launch({
-  enableExtensions: true,
-  chromeFlags: [
-    // load built extension
-    `--load-extension=${extensionDirectory}`,
-    // disable infobars for Google API Keys and Default Browser check
-    // disable Developer Mode Extensions popup
-    '--enable-automation',
-    // disable automation infobar ("Chrome is being controlled by automated test software")
-    '--disable-infobars'
-  ]
+  ignoreDefaultFlags: true,
+  chromeFlags: Array.from(flags),
 }).then(chrome => {
   console.log(`Chrome is running as process ${chrome.pid}.`)
 }).catch(error => {
