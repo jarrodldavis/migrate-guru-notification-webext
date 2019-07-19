@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+#### Features and Fixes
+
+-   Update dependencies ([#24], [#26])
+-   Upgrade to Svelte 3 ([#25])
+-   Fix bug with options introduced in Svelte 3 upgrade ([#27])
+
+#### Development and CI
+
+-   Use npm-packaged version scripts instead of submodule ([#24])
+-   Add npm prepare script to initialize git submodule automatically ([#28])
+-   Add Slack notifications for Travis CI ([#28])
+
+[#24]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/24
+
+[#25]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/25
+
+[#26]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/26
+
+[#27]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/27
+
+[#28]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/28
+
 ## [0.1.0]
 
 ### Added
