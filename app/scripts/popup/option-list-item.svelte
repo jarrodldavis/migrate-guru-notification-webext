@@ -6,7 +6,7 @@
   export let setting;
 
   // stores can't be created in reactive declarations
-  const enabled = create_setting_store(setting, true);
+  const enabled = create_setting_store(setting);
 
   $: value_message_key = $enabled ? 'popupEnabledListItem' : 'popupDisabledListItem';
 </script>

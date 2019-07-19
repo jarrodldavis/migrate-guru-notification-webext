@@ -1,6 +1,13 @@
 import { readable } from "svelte/store";
 
-export function create_setting_store(key, default_value) {
+const DEFAULTS = {
+  notifications: true,
+  favicons: true
+}
+
+export function create_setting_store(key) {
+  const default_value = DEFAULTS[key];
+
   async function initialize(set) {
     const { [key]: value } = await browser.storage.local.get({ [key]: default_value });
     set(value);
