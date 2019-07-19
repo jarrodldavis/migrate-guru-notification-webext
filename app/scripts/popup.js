@@ -1,3 +1,3 @@
-import Popup from './popup.svelte';
+import Popup from './popup/popup.svelte';
 
 new Popup({ target: document.querySelector('main') });
