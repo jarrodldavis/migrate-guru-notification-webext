@@ -4,6 +4,7 @@
   "description": "Add notifications for Migrate Guru migrations",
   "main": "src/manifest.json",
   "scripts": {
+    "prepare": "git submodule update --init --recursive",
     "dev": "webextension-toolbox dev",
     "dev:firefox": "concurrently -k -i -n run,build 'npm:open:firefox' 'npm:dev firefox'",
     "dev:chrome": "concurrently -k -i -n run,build 'npm:open:chrome' 'npm:dev chrome'",
