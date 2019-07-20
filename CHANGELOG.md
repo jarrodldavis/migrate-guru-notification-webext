@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+#### Development and CI
+
+-   Improve Firefox development ([#31])
+
+[#31]: https://github.com/jarrodldavis/migrate-guru-notification-webext/issues/31
+
 ## [0.2.0]
 
 ### Changed
