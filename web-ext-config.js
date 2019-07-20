@@ -7,7 +7,8 @@ module.exports = {
       'datareporting.policy.dataSubmissionPolicyBypassNotification=true',
       'browser.contentblocking.introCount=5'
     ],
-    startUrl: ['about:devtools-toolbox?type=extension&id=migrate-guru-notification%40firefox-addons.jarrodldavis.com']
+    startUrl: ['about:devtools-toolbox?type=extension&id=migrate-guru-notification%40firefox-addons.jarrodldavis.com'],
+    noReload: true
   },
   lint: {
     warningsAsErrors: true
