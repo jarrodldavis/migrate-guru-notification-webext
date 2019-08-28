@@ -43,7 +43,7 @@
     "concurrently": "^4.1.2",
     "copy-webpack-plugin": "^5.0.4",
     "svelte": "^3.6.7",
-    "svelte-loader": "^2.13.5",
+    "svelte-loader": "^2.13.6",
     "wait-on": "^3.3.0",
     "web-ext": "^3.1.1",
     "webextension-toolbox": "^3.0.0"
